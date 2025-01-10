@@ -1,0 +1,161 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fontspec}
+
+% Add PDF optimization settings
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+% Set document margins
+\geometry{
+  top=0.2in,
+  bottom=0.7in,
+  left=0.7in,
+  right=0.8in
+}
+
+% Set default font
+\setmainfont{TeX Gyre Termes}
+
+% Configure section formatting
+\titleformat{\section}
+  {\Large\scshape\raggedright}
+  {}{0em}
+  {}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+% Custom commands
+
+%\newcommand{\contact}[6]{
+%  \begin{center}
+%    \begin{tabular*}{0.8\textwidth}{@{\extracolsep{\fill}} l l l}
+%      \faPhone\ #1 & 
+%      \faEnvelope\ \href{mailto:#2}{#2} & 
+%      \faLinkedin\ \href{#3}{LinkedIn} \\[0.0em]
+%      \faMapMarker*\ #4 & 
+%      \faGlobe\ \href{#5}{Website} & 
+%      \faGithub\ \href{#6}{GitHub}
+%    \end{tabular*}
+%  \end{center}
+%}
+% Or, on one line:
+\newcommand{\contact}[6]{
+  \begin{center}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l}
+      \faEnvelope\ \href{mailto:#1}{#1} & 
+      \faPhone\ #2 & 
+      \faMapMarker*\ #3 & 
+%      \faGlobe\ \href{#4}{Website} & 
+      \faLinkedin\ \href{#4}{LinkedIn} &
+      \faGithub\ \href{#5}{GitHub}
+    \end{tabular*}
+  \end{center}
+}
+
+% Formatted entry block for experience or education sections
+\newcommand{\entry}[4]{
+  \vspace{0.1em}
+  \noindent\textbf{#1} \hfill \textit{#2}
+  \\ \textit{#3} \hfill #4
+  \vspace{0.3em}
+}
+
+% Formats individual achievement bullet points
+\newcommand{\achievement}[1]{
+  \vspace{-.5em}
+  \item #1
+}
+
+% Begin document
+\begin{document}
+
+% Header
+\begin{center}
+  {\Huge\textbf{Drew Herron}}
+\end{center}
+  
+  \contact
+    {dherron@mailbox.org}
+    {(503) 828-8880}
+    {Portland, OR}
+%    {https://www.drewherron.com}
+    {https://www.linkedin.com/in/drew-herron}
+    {https://github.com/drewherron}
+
+% Experience Section
+\section{Experience}
+
+\entry{Data Project Assistant}{January 2019 -- September 2021}{Energy Trust of Oregon}{Portland, OR}
+\begin{itemize}[leftmargin=*]
+  \achievement{Led data cleanup projects including merging duplicates, updating classifications, and reorganizing hierarchies}
+  \achievement{Developed and maintained Power BI reports for tracking data quality, year-end QC, and database health}
+  \achievement{Created SQL queries and R programs to analyze and deduplicate data across CRM and database systems}
+  \achievement{Collaborated with DBAs to improve database structure and establish business rules for CRM entity classification}
+  \achievement{Wrote technical documentation for data merging procedures and contributed code snippets for SQL, R, and DAX}
+\end{itemize}
+
+\entry{Business Intelligence Developer}{September 2016 -- January 2019}{WE Communications}{Portland, OR}
+\begin{itemize}[leftmargin=*]
+  \achievement{Helped plan data collection strategies to measure press coverage and public relations impact}
+  \achievement{Extracted, manipulated and transformed data using a variety of BI methods}
+  \achievement{Conducted analysis of data using such tools as Excel, Power BI, SQL and Python}
+  \achievement{Responsible for the creation of visualizations/infographics to convey data clearly and succinctly}
+  \achievement{Discovered actionable insights from data trends and drafted detailed reports for clients}
+\end{itemize}
+
+\entry{Cryptologic Linguist}{December 2008 -- December 2013}{United States Air Force}{Security Clearance: Top Secret // SI}
+\begin{itemize}[leftmargin=*]
+  \achievement{Led a team of 30+ translators providing support to US forces deployed abroad}
+  \achievement{Developed and implemented new methods for tracking productivity and collection data}
+  \achievement{Facilitated collaboration between multiple teams and organizations}
+  \achievement{Trained and qualified new employees in intelligence processing methods}
+  \achievement{Maintained DLPT level 3/3 proficiency in both Arabic and German}
+\end{itemize}
+
+% Education Section
+\section{Education}
+
+\entry{M.S. Computer Science}{December 2024}{Portland State University}{Portland, OR}
+\vspace{-.1cm}
+\begin{itemize}[leftmargin=*]
+  \achievement{Concentration: Artificial Intelligence \& Machine Learning}
+  \achievement{GPA: 4.0}
+\end{itemize}
+
+\entry{Full Stack Bootcamp}{2017}{PDX Code Guild}{Portland, OR}
+
+\entry{B.A. International Studies}{June 2006}{University of Oregon}{Eugene, OR}
+\vspace{-.1cm}
+\begin{itemize}[leftmargin=*]
+  \achievement{Concentration: Diplomacy and International Relations}
+  \achievement{Year abroad: University of Heidelberg, Germany}
+\end{itemize}
+
+% Skills Section
+\section{Skills}
+\begin{itemize}[leftmargin=*, itemsep=-0.2em]
+  \item \textbf{Programming Languages:} Python, C, C++, Lisp, SQL, JavaScript, HTML, CSS
+  \item \textbf{Tools \& Technologies:} Linux, Git, Docker, NLTK, PyTorch, TensorFlow, pandas, NumPy, scikit-learn
+  \item \textbf{Data Systems:} Data Engineering, Database Design, Query Optimization, Data Structures, Algorithms
+  \item \textbf{AI \& Analytics:} Natural Language Processing, LLMs, Deep Learning, Sentiment Analysis, Agentic AI, RAG
+  \item \textbf{Languages:} English (Native), German, Arabic, learning Portuguese
+\end{itemize}
+ 
+\end{document}
