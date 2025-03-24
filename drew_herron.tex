@@ -1,3 +1,6 @@
+% Drew Herron
+% Resume - 2025
+% Optimized for AI ATS (hopefully)
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -33,6 +36,9 @@
 
 % Set default font
 \setmainfont{TeX Gyre Termes}
+
+% Manually set line spacing
+\linespread{0.97}
 
 % Configure section formatting
 \titleformat{\section}
@@ -72,7 +78,7 @@
 % Formatted entry block for experience or education sections
 \newcommand{\entry}[4]{
   \vspace{0.1em}
-  \noindent\textbf{#1} \hfill \textit{#2}
+  \noindent\textbf{#1} \hfill #2
   \\ \textit{#3} \hfill #4
   \vspace{0.3em}
 }
@@ -83,14 +89,14 @@
   \item #1
 }
 
-% Begin document
+%%%% Begin document %%%%
 \begin{document}
 
 % Header
 \begin{center}
   {\Huge\textbf{Drew Herron}}
 \end{center}
-  \vspace{.1cm}
+  \vspace{-.0cm}
   \contact
     {dherron@mailbox.org}
     {(503) 828-8880}
@@ -98,11 +104,18 @@
     {https://www.drewherron.com}
     {https://www.linkedin.com/in/drew-herron}
     {https://github.com/drewherron}
+\vspace{-.4cm}
+
+% Summary section
+\section{Summary}
+\textbf{Recent master’s graduate in computer science} with 6+ years of experience in data analytics, data quality, business intelligence, and AI/ML. Strong background in natural language processing, linguistics, data engineering, and cybersecurity. Seeking roles in AI development or applied machine learning; open to relocation and remote work.
+
+\vspace{-.1cm}
 
 % Experience Section
 \section{Experience}
 
-\entry{Data Project Assistant}{July 2019 -- September 2021}{Energy Trust of Oregon}{Portland, OR}
+\entry{Data Project Assistant}{07/2019 -- 09/2021}{Energy Trust of Oregon}{Portland, OR}
 \begin{itemize}[leftmargin=*]
   \achievement{Led data cleanup projects including merging duplicates, updating classifications, and reorganizing hierarchies}
   \achievement{Developed and maintained Power BI reports for tracking data quality, year-end QC, and database health}
@@ -111,7 +124,7 @@
   \achievement{Wrote technical documentation for data merging procedures and contributed code snippets for SQL, R, and DAX}
 \end{itemize}
 
-\entry{Business Intelligence Developer}{September 2016 -- January 2019}{WE Communications}{Portland, OR}
+\entry{Business Intelligence Developer}{09/2016 -- 01/2019}{WE Communications}{Portland, OR}
 \begin{itemize}[leftmargin=*]
   \achievement{Helped plan data collection strategies to measure press coverage and public relations impact}
   \achievement{Extracted, manipulated and transformed data using a variety of BI methods}
@@ -120,42 +133,39 @@
   \achievement{Discovered actionable insights from data trends and drafted detailed reports for clients}
 \end{itemize}
 
-\entry{Cryptologic Linguist}{December 2008 -- December 2013}{United States Air Force}{Clearance: TS\hspace{.1em}/\hspace{.03em}SCI}
+\entry{Cryptologic Linguist}{12/2008 -- 12/2013}{United States Air Force}{Clearance: TS\hspace{.1em}/\hspace{.03em}SCI}
 \begin{itemize}[leftmargin=*]
-  \achievement{Led a team of 30+ translators providing support to US forces deployed abroad}
   \achievement{Developed and implemented new methods for tracking productivity and collection data}
+  \achievement{Led a team of 30+ translators providing support to US forces deployed abroad}
   \achievement{Facilitated collaboration between multiple teams and organizations}
   \achievement{Trained and qualified new employees in intelligence processing methods}
   \achievement{Maintained DLPT level 3/3 proficiency in both Arabic and German}
 \end{itemize}
+\vspace{-.3cm}
 
 % Education Section
 \section{Education}
 
-\entry{M.S. Computer Science}{December 2024}{Portland State University}{Portland, OR}
+\entry{M.S. Computer Science}{09/2021 -- 12/2024}{Portland State University}{Portland, OR}
 \vspace{-.1cm}
 \begin{itemize}[leftmargin=*]
   \achievement{Concentration: Artificial Intelligence \& Machine Learning}
   \achievement{GPA: 4.0; Honor Society of Phi Kappa Phi}
 \end{itemize}
 
-\entry{Full Stack Bootcamp}{2019}{PDX Code Guild}{Portland, OR}
+\entry{Full Stack Bootcamp}{02/2019 -- 05/2019}{PDX Code Guild}{Portland, OR}
 
-\entry{B.A. International Studies}{June 2006}{University of Oregon}{Eugene, OR}
-\vspace{-.1cm}
-\begin{itemize}[leftmargin=*]
-  \achievement{Concentration: Diplomacy \& International Relations}
-  \achievement{Year abroad: University of Heidelberg, Germany}
-\end{itemize}
+\entry{B.A. International Studies}{09/2001 -- 06/2005}{University of Oregon}{Eugene, OR}
+\vspace{-.3cm}
 
 % Skills Section
 \section{Skills}
 \begin{itemize}[leftmargin=*, itemsep=-0.2em]
   \item \textbf{Programming Languages:} Python, C, C++, Lisp, SQL, JavaScript, HTML, CSS
-  \item \textbf{Tools \& Technologies:} Linux, Git, Docker, NLTK, PyTorch, TensorFlow, pandas, NumPy, scikit-learn, LangChain
-  \item \textbf{Data Systems:} Data Engineering, ETL, Database Design, Query Optimization, Data Structures, Data Quality
-  \item \textbf{AI \& Analytics:} Natural Language Processing, LLMs, Deep Learning, Sentiment Analysis, Agentic AI, RAG
-  \item \textbf{Languages:} English (Native), German, Arabic, learning Portuguese
+  \item \textbf{Libraries \& Tools:} Git, Docker, Django, NLTK, PyTorch, TensorFlow, pandas, NumPy, scikit-learn, LangChain
+  \item \textbf{Data Engineering:} Database Design, Query Optimization, ETL, Data Quality, Cloud Infrastructure, GCP, AWS
+  \item \textbf{AI \& ML:} LLMs, NLP, Computer Vision, Deep Learning, Sentiment Analysis, Vector Search, Agentic AI, RAG
+  \item \textbf{Languages:} English (Native), German, Arabic, Chinese, learning Portuguese
 \end{itemize}
  
 \end{document}
